@@ -45,7 +45,7 @@ GCGCATATGCGCATATGCGCATATGCGCATATGCGCATATGCGCATATGCGCATAT
 GCGCATATGCGCATATGCGCATATGCGCATATGCGCATATGCGCATATGCGCATAT
 ~~~
 
-In the example above, the T at the end of line 2 is directly connected to the first A of line 3. The newlines (enters) are ignored.
+In the example above, the T at the end of line 2 is directly connected to the first A of line 3. The newlines (enters) are ignored. Notice that where genes begin and end are not captured here. No annotations, just a long string of sequence. This is where antiSMASH comes in...it will predict genes from your fasta, annotate their proposed functions, and identify which genes are arranged in biosynthetic gene clusters.
 
 # Using antiSMASH to identify biosynthetic gene clusters within a genomic DNA sequence
 
