@@ -14,7 +14,7 @@ If you find antiSMASH useful in your research, please cite the appropriate versi
 # Introduction
 *From the [antiSMASH 5.0 User Manual](https://docs.antismash.secondarymetabolites.org/PDFmanual/antiSMASH5manual.pdf) (accessed 2020-01-08):*
 
-Many microbial genomes contain several (up to 30-40) gene clusters encoding the biosynthesis of secondary metabolites. Subsequently mining genetic data has become a very important method in modern screening approaches for bioactive compounds like antibiotics. The antibiotics and secondary metabolites analysis shell antiSMASH is a comprehensive pipeline for the automated mining of finished or draft genome data for the presence of secondary metabolite biosynthetic gene clusters. antiSMASH is an Open Source software written in Python.
+>Many microbial genomes contain several (up to 30-40) gene clusters encoding the biosynthesis of secondary metabolites. Subsequently mining genetic data has become a very important method in modern screening approaches for bioactive compounds like antibiotics. The antibiotics and secondary metabolites analysis shell antiSMASH is a comprehensive pipeline for the automated mining of finished or draft genome data for the presence of secondary metabolite biosynthetic gene clusters. antiSMASH is an Open Source software written in Python.
 
 ## What is a genome, anyway?
 
