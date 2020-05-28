@@ -11,9 +11,7 @@ Materials herein were prepared for the [2020 Tiny Earth Symposium](https://tinye
 
 If you find antiSMASH useful in your research, please cite the appropriate version in any work or publications. This tutorial currently applies to [antiSMASH v5](https://academic.oup.com/nar/article/47/W1/W81/5481154).
 
-# Using antiSMASH to identify biosynthetic gene clusters within a genomic DNA sequence
-
-## Introduction
+# Introduction
 *From the [antiSMASH 5.0 User Manual](https://docs.antismash.secondarymetabolites.org/PDFmanual/antiSMASH5manual.pdf) (accessed 2020-01-08):*
 
 Many microbial genomes contain several (up to 30-40) gene clusters encoding the biosynthesis of secondary metabolites. Subsequently mining genetic data has become a very important method in modern screening approaches for bioactive compounds like antibiotics. The antibiotics and secondary metabolites analysis shell antiSMASH is a comprehensive pipeline for the automated mining of finished or draft genome data for the presence of secondary metabolite biosynthetic gene clusters. antiSMASH is an Open Source software written in Python.
@@ -48,6 +46,8 @@ GCGCATATGCGCATATGCGCATATGCGCATATGCGCATATGCGCATATGCGCATAT
 ~~~
 
 In the example above, the T at the end of line 2 is directly connected to the first A of line 3. The newlines (enters) are ignored.
+
+# Using antiSMASH to identify biosynthetic gene clusters within a genomic DNA sequence
 
 ## Directions for general use of antiSMASH (Tiny Earth specific instructions to follow)
 
