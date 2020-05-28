@@ -18,6 +18,37 @@ If you find antiSMASH useful in your research, please cite the appropriate versi
 
 Many microbial genomes contain several (up to 30-40) gene clusters encoding the biosynthesis of secondary metabolites. Subsequently mining genetic data has become a very important method in modern screening approaches for bioactive compounds like antibiotics. The antibiotics and secondary metabolites analysis shell antiSMASH is a comprehensive pipeline for the automated mining of finished or draft genome data for the presence of secondary metabolite biosynthetic gene clusters. antiSMASH is an Open Source software written in Python.
 
+## What is a genome, anyway?
+
+The word 'genome' gets thrown around a lot nowadays with ever-decreasing costs of DNA sequencing and ever-increasing piles of sequencing data. Here, we’ll use the word genome to refer to a DNA sequencing assembly. 
+
+### A brief overview of DNA sequencing
+To generate an assembly of a bacteria’s genome, researches (including those at the Tiny Earth Chemistry Hub) have to lyse open the cells and physically or chemically isolate the DNA.  This DNA is then prepped for sequencing (different technologies have different preparation protocols) before being read through a sequencer, one molecule at a time. It’s important to remember that each of these molecules is not the entire genome, but a small piece of it. These pieces are called *reads*. In Illumina (Solexa) sequencing, reads are between 150 and a few hundred base pairs long. In “long read” technologies like PacBio or Oxford Nanopore, the reads can be ~100,000 base pairs long. Regardless of the read length, currently we don’t have the technology to sequence an entire genome from beginning to end, so we end up with these reads/pieces that we need to put back together. Since in a given sequencing run will sequence millions of these reads randomly broken at various loci in the genome, a lot of reads will overlap and assembly algorithms can use this information to put your genome back together into *contigs*, or large contiguous stretches of DNA sequence. Keep in mind that this is not a perfect process, so sometimes there are more than one contig after assembly. This could be due to biology (e.g. plasmids will be assembled to their own contigs) or because of technical reasons (e.g. poor quality DNA prep, insufficient sequencing depth, etc.).
+
+<center>
+	<img src="/images/sequencing_overview.PNG" alt="antiSMASH submission page" title="Shotgun DNA sequencing overview" width="600" height="400" />
+</center>
+
+### Fasta format
+Many different formatting conventions exist for files containing sequencing data. For this tutorial, we will focus on one: *fasta* format. It is quite simple and is the standard for storing assemblies. Nucleotide assemblies are typically stored as fasta files with the file extension \*.fasta or \*.fna. They have two components:
+1. *The header*
+	- A fasta header is what you (or NCBI or the assembly program) name your sequence. These lines start with a **>** and will immediately be followed by the sequence name (no spaces). Optionally, after the name descriptions are added after a space. These descriptions are just for humans and are typically ignored by analysis software.
+2. *The sequence itself*
+	- The sequence itself begins on the line just after a header. This can be multiple lines, all on one line, whatever you like. Anything after a given header will be treated as one contiguous sequence, until the next header is seen.
+
+~~~
+>example_sequence_name Example description. This is my favorite sequence
+AAAGGGCCCTTTAAAGGGCCCTTTAAAGGGCCCTTTAAAGGGCCCTTT
+AAAGGGCCCTTTAAAGGGCCCTTTAAAGGGCCCTTTAAAGGGCCCTTT
+AAAGGGCCCTTTAAAGGGCCCTTTAAAGGGCCCTTTAAAGGGCCCTTT
+>another_sequence_name This is not my favorite sequence
+GCGCATATGCGCATATGCGCATATGCGCATATGCGCATATGCGCATATGCGCATAT
+GCGCATATGCGCATATGCGCATATGCGCATATGCGCATATGCGCATATGCGCATAT
+GCGCATATGCGCATATGCGCATATGCGCATATGCGCATATGCGCATATGCGCATAT
+~~~
+
+In the example above, the T at the end of line 2 is directly connected to the first A of line 3. The newlines (enters) are ignored.
+
 ## Directions for general use of antiSMASH (Tiny Earth specific instructions to follow)
 
 ### Prepare, locate, identify your genomic DNA sequence
