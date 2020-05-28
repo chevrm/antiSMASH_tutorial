@@ -11,7 +11,7 @@ Materials herein were prepared for the [2020 Tiny Earth Symposium](https://tinye
 
 If you find antiSMASH useful in your research, please cite the appropriate version in any work or publications. This tutorial currently applies to [antiSMASH v5](https://academic.oup.com/nar/article/47/W1/W81/5481154).
 
-## Using antiSMASH to identify biosynthetic gene clusters within a genomic DNA sequence
+# Using antiSMASH to identify biosynthetic gene clusters within a genomic DNA sequence
 
 ## Introduction
 *From the [antiSMASH 5.0 User Manual](https://docs.antismash.secondarymetabolites.org/PDFmanual/antiSMASH5manual.pdf) (accessed 2020-01-08):*
@@ -46,5 +46,62 @@ Many microbial genomes contain several (up to 30-40) gene clusters encoding the 
 	<img src="/images/as_example.PNG" alt="example antiSMASH results overview" title="antiSMASH sample submission page" width="1000" height="615" />
 </center>
 
-	- 
+# Using antiSMASH in a Tiny Earth course
 
+## Procedure
+Use antiSMASH to identify biosynthetic gene clusters within genomic DNA sequences. You should perform at least two antiSMASH analyses of genomes from:
+1. One of our TE isolates.
+	1. If available, use the complete genomic nucleotide sequence of one of our isolates, or use a genomic TE sequence file shared from the ChemHub.
+	2. If you had successful PCR and sequencing of the 16S rRNA gene of one of your isolates, you can use the genomic, nucleotide sequence of the top BLAST match.
+2. An interesting bacterial secondary metabolite.
+Use the list of natural products below to use antiSMASH to identify the biosynthetic gene cluster responsible for making that bacterial secondary metabolite.
+	1. Table 1, below, is a list of interesting natural products. Your job will be to do some research to find what bacterial organism(s) make that natural product. Then search NCBI genome database to find the genomic, nucleotide accession number for that species. (You may also add your own bacterial natural product of interest to Table 1!)
+	2. Use this genome to run antiSMASH. Please add the species name and accession number to Table 1.
+ 
+| Bacterial secondary metabolite | Student name | Natural product class | Organism | NCBI accession |
+| :----------------------------: | :----------: | :-------------------: | :------: | :------------: |
+| erythromycin    | | | | |
+| zwittermicin A  | | | | |
+| oxytetracycline | | | | |
+| cyphomycin | | | | |
+| keyicin | | | | |
+| ...etc | | | | |
+| Students can add their own | | | | |
+
+**_Table 1:_** *List of interesting bacterial secondary metabolites for antiSMASH analysis.*
+
+
+| Bacterial secondary metabolite | Natural product class | Biosynthetic gene cluster type | Organism | NCBI accession |
+| :----: | :----: | :----: | :----: | :----: |
+| erythromycin | macrolide (aka cyclic polyketide) | type 1 polyketide | *Saccharopolyspora erythraea* NRRL 2338 | [NC_009142.1](https://www.ncbi.nlm.nih.gov/nuccore/NC_009142.1/) |
+| zwittermicin A  | aminopolyol | hybrid type 1 polyketide, *trans*-AT polyketide, nonribosomal peptide | *Bacillus cereus* UW85 | [NZ_LYVD00000000](https://www.ncbi.nlm.nih.gov/nuccore/NZ_LYVD00000000) |
+| oxytetracycline | polyketide (tetracycline type) | type 1 polyketide | *Streptomyces rimosus* WT5260 | [NZ_CP025551.1](https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP025551.1) |
+| cyphomycin | polyketide (polyene type) | type 1 polyketide | *Streptomyces* sp. ISID311 | [NZ_VOQD00000000.1](https://www.ncbi.nlm.nih.gov/nuccore/NZ_VOQD00000000.1) |
+| keyicin | anthracycline | type 2 polyketide | *Micromonospora* sp. WMMB235 | [NZ_MDRX01000002.1](https://www.ncbi.nlm.nih.gov/nuccore/NZ_MDRX01000002.1) |
+
+
+**_Table 2:_** *Example instructor key. Not sure which clusters/metabolites/organisms to add? Check out [MIBiG](https://mibig.secondarymetabolites.org/).*
+
+## Results and Discussion
+
+### Example classroom activity
+1. Analyze antiSMASH results of one our TE isolates.
+	1. Analyze your results on the overview page and click on each region to find more information. How many total regions were identified within your genomic sequence? Are there any regions that have identifiable biosynthetic gene clusters? (“most similar known cluster”) Be sure to pay attention to similarity – what does this mean?
+	2. Share your results: Add this information to our class spreadsheet of TE isolates. To the column titled “possible secondary metabolites produced”, list secondary metabolite clusters with 70% or higher similarity.
+	3. Share your results: Make a slide(s) in our Google Slides for this project describing the isolate, BLAST results, and antiSMASH results. Include a screen capture of your antiSMASH results. Add structures of the possible secondary metabolites identified. Do a little bit of literature research – how much have these metabolites been studied? Are they reported to have antibacterial activity? Are there any procedures for extraction and isolation?
+2. Analyze antiSMASH results of a known bacterial secondary metabolite.
+	1. Did antiSMASH identify a region corresponding to the biosynthetic gene cluster that particular secondary metabolite? What is the percent similarity for this region, and what does that indicate? How many total regions were identified within your genomic sequence? Are there any other regions that have identifiable biosynthetic gene clusters? (“most similar known cluster”) What molecules do these biosynthetic gene clusters produce?
+	2. Share your results: Make a slide(s) in our Google Slides for this project describing your antiSMASH results. Include a screen capture of your antiSMASH results, structure of the bacterial secondary metabolite and answers to the questions above. Do some literature research. Has this biosynthetic gene cluster been characterized? If so, include a figure and reference.
+
+### Example topic for classroom discussion
+
+1. Did you notice any secondary metabolites that appear in several bacterial species? What is the function of these molecules? (geosmin, hopene, etc.)?
+
+# Resources and links
+
+- **[antiSMASH](https://antismash.secondarymetabolites.org/#!/start)**: **anti**biotics and **S**econdary **M**etabolite **A**nalysis **S**hell, a bacterial biosynthetic gene cluster prediction and characterization tool
+- **[antiSMASH documentation](https://docs.antismash.secondarymetabolites.org/)**: a helpful user guide to antiSMASH
+- **[fungiSMASH](https://fungismash.secondarymetabolites.org/#!/start)**: similar to antiSMASH, but specifically built for fungal genomes
+- **[plantiSMASH](http://plantismash.secondarymetabolites.org/)**: similar to antiSMASH, but specifically built for plant genomes
+- **[MIBiG](https://mibig.secondarymetabolites.org/)**: **M**inimum **I**nformation about a **Bi**osynthetic **G**ene cluster repository, a large curated repository of biosynthetic gene clusters with annotations and links to relevant publications and/or genomic data
+- **[ARTS](http://arts.ziemertlab.com/)**: **A**ntibiotic **R**esistant **T**arget **S**eeker, a tool to help identify resistance genes within BGCs.
