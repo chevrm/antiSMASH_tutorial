@@ -94,6 +94,9 @@ Use the list of natural products below to use antiSMASH to identify the biosynth
 | erythromycin    | | | | |
 | zwittermicin A  | | | | |
 | oxytetracycline | | | | |
+| actinorhodin | | | | |
+| violacein | | | | |
+| salinosporamide | | | | |
 | cyphomycin | | | | |
 | keyicin | | | | |
 | ...etc | | | | |
@@ -107,11 +110,18 @@ Use the list of natural products below to use antiSMASH to identify the biosynth
 | erythromycin | macrolide (aka cyclic polyketide) | type 1 polyketide | *Saccharopolyspora erythraea* NRRL 2338 | [NC_009142.1](https://www.ncbi.nlm.nih.gov/nuccore/NC_009142.1/) |
 | zwittermicin A  | aminopolyol | hybrid type 1 polyketide, *trans*-AT polyketide, nonribosomal peptide | *Bacillus cereus* UW85 | [NZ_LYVD00000000](https://www.ncbi.nlm.nih.gov/nuccore/NZ_LYVD00000000) |
 | oxytetracycline | polyketide (tetracycline type) | type 1 polyketide | *Streptomyces rimosus* WT5260 | [NZ_CP025551.1](https://www.ncbi.nlm.nih.gov/nuccore/NZ_CP025551.1) |
+| actinorhodin | “benzoisochromanequinone dimer” polyketide | type 2 polyketide | *Streptomyces coelicolor* A3(2) | [AL645882.2](https://www.ncbi.nlm.nih.gov/nuccore/AL645882.2/) |
+| violacein | alkaloid, “bis-indole pigment” | alkaloid | *Chromobacterium violaceum* ATCC 12472 | [NC_005085.1](https://www.ncbi.nlm.nih.gov/nuccore/NC_005085.1) |
+| salinosporamide | | hybrid NRPS-PKS | *Salinispora tropica* CNB-440 | [NC_009380.1](https://www.ncbi.nlm.nih.gov/nuccore/NC_009380.1/) |
 | cyphomycin | polyketide (polyene type) | type 1 polyketide | *Streptomyces* sp. ISID311 | [NZ_VOQD00000000.1](https://www.ncbi.nlm.nih.gov/nuccore/NZ_VOQD00000000.1) |
 | keyicin | anthracycline | type 2 polyketide | *Micromonospora* sp. WMMB235 | [NZ_MDRX01000002.1](https://www.ncbi.nlm.nih.gov/nuccore/NZ_MDRX01000002.1) |
 
 
 **_Table 2:_** *Example instructor key. Not sure which clusters/metabolites/organisms to add? Check out [MIBiG](https://mibig.secondarymetabolites.org/).*
+
+Note: In tables 1 and 2, cyphomycin is an example of a producing organism's genome that is a little harder to find on NCBI. *Hint: you can find a link to the genome on MIBiG's [cyphomycin entry](https://mibig.secondarymetabolites.org/repository/BGC0001877/index.html#r1c1)*.
+
+Another note: the keyicin example 
 
 ## Results and Discussion
 
