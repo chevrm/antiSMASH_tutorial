@@ -121,7 +121,7 @@ Use the list of natural products below to use antiSMASH to identify the biosynth
 
 Note: In tables 1 and 2, cyphomycin is an example of a producing organism's genome that is a little harder to find on NCBI. *Hint: you can find a link to the genome on MIBiG's [cyphomycin entry](https://mibig.secondarymetabolites.org/repository/BGC0001877/index.html#r1c1)*.
 
-Another note: the keyicin example 
+Another note: The keyicin example will not show a match to keyicin, because keyicin is not currently in MIBiG (v2.0). This is to highlight that even known examples from the literature my not end up in databases. For those wondering, the keyicin gene cluster is the type 2 polyketide region with many glycosyltransferases.
 
 ## Results and Discussion
 
