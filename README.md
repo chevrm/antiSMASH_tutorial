@@ -70,6 +70,40 @@ In the example above, the T at the end of line 2 is directly connected to the fi
 	<img src="/images/as_home.png" alt="antiSMASH submission page" title="antiSMASH sample submission page" width="1000" height="400" />
 </center>
 
+### Detection stringency
+antiSMASH5+ can detect BGCs at three stringency levels: strict, relaxed (default), and loose. For a full description of the rules, see the [antiSMASH github repository]( https://github.com/antismash/antismash/tree/master/antismash/detection/hmm_detection/cluster_rules).
+- Strict
+	- This will follow strict rules for finding a BGC. For most biosynthetic classes, this will be the same as relaxed, but for some (mostly multimodular biosynthesis) will have difference between strict and relaxed. For example, KS, AT, and ACP domains must *all* be present for a T1PKS to be identified. Similarly, C, A, and PCP domains must all be present for NRPSs.
+- Relaxed
+	- Same as strict, but *not all* hallmark domains are necessary to call a cluster. If only one or a few NRPS domains are found and some are not seen, these will be designated “NRPS-like” clusters
+- Loose
+	- Same as relaxed, but new classes are added. These are left out of the default as they are often primary metabolism instead of secondary metabolism (thus “false-positives”). These classes include saccharides, fatty-acids, and halogen-containing regions.
+
+For almost all use cases, the default of *relaxed* is recommended. 
+
+### Other parameters
+*From the [antiSMASH 5.0 User Manual](https://docs.antismash.secondarymetabolites.org/PDFmanual/antiSMASH5manual.pdf) (accessed 2020-01-08):*
+
+- KnownClusterBlast
+	>The identified clusters are searched against the MIBiG repository. MIBiG is a hand curated data collection of biosynthetic gene clusters, which have been experimentally characterized.
+
+- ClusterBlast
+	>The identified clusters are searched against a comprehensive gene cluster database and similar clusters are identified. The algorithm used here is inspired by MultiGeneBlast. It runs BlastP using each amino acid sequence from a detected gene cluster as a query on a large database of predicted protein sequences from secondary metabolite biosynthetic gene clusters, and pools the results to identify the gene clusters that are most homologous to the gene cluster that was detected in your query nucleotide sequence. Please note that selecting this option increases the runtime significantly.
+
+- SubClusterBlast
+	>The identified clusters are searched against a database containing operons involved in the biosynthesis of common secondary metabolite building blocks (e.g. the biosynthesis of non-proteinogenic amino acids).
+
+- ActiveSiteFinder
+	>Active sites of several highly conserved biosynthetic enzymes are detected and variations of the active sites are reported.
+
+- Cluster Pfam analysis
+	>Each gene product encoded in the detected BGCs is analyzed against the PFAM database. Hits are annotated in the final Genbank/EMBL files that can be downloaded after the analysis is finished. Please note that these results are not displayed on the antiSMASH HTML results page but they are present in the results genbank file that can be downloaded. Also, selecting this option normally increases the runtime.
+
+- Pfam-based GO term annotation
+	>This is annotating the Cluster Pfam analysis described above with GO term annotations. Please note that these results are not displayed on the antiSMASH HTML results page but they are present in the results genbank file that can be downloaded (see "Understanding the output" section of the documentation for instructions on how to download the results). Also, selecting this option normally increases the runtime
+
+For Tiny Earth and related exercises, KnownClusterBlast, ClusterBlast, SubClusterBlast, and ActiveSiteFinder are recommended to be **selected**, while Cluster Pfam analysis and Pfam-based GO term annotation are recommended to be left **unselected**. Depending on the antiSMASH queue, this will (usually) allow for the analysis to finish within 20-30m and could fit within a single teaching session.
+
 ### Interpreting results
 - Results will be emailed to you if an email address was provided. They will also appear in your browser if you leave the page open while job is running. See below for an annotated example overview antiSMASH results page:
 
