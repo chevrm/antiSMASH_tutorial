@@ -7,6 +7,8 @@
 
 Materials herein were prepared for the [2020 Tiny Earth Symposium](https://tinyearth.wisc.edu/2020-symposium/) by [Marc Chevrette](http://chevrm.github.io) (University of Wisconsin-Madison, Wisconsin Institute for Discovery, Tiny Earth Chemistry Hub) and [Kristin Labby](https://www.beloit.edu/live/profiles/248-kristin-labby) (Beloit College, Tiny Earth Partner Instructor).
 
+[Watch the Tiny Earth Symposium tutorial and workshop here!](https://www.youtube.com/watch?v=SOcv5-Q04Xw&feature=emb_logo)
+
 ### Attribution
 
 If you find antiSMASH useful in your research, please cite the appropriate version in any work or publications. This tutorial currently applies to [antiSMASH v5](https://academic.oup.com/nar/article/47/W1/W81/5481154).
